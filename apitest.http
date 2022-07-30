@@ -1,0 +1,43 @@
+GET http://localhost:3300/health
+###
+
+GET http://localhost:3300/api/v1/tickets
+
+###
+
+GET http://localhost:3300/api/v1/tickets/draw?wc=2
+
+###
+POST  http://localhost:3300/api/v1/tickets/sell
+Content-Type: application/json
+
+{
+    "username":"torik",
+    "price":5
+}
+
+###
+POST http://localhost:3300/api/v1/tickets/bulk
+Content-Type: application/json
+
+{
+    "username":"hasib",
+    "price":20,
+    "quantity":3
+}
+
+###
+
+PATCH http://localhost:3300/api/v1/tickets/u/al hasib
+Content-Type: application/json
+
+{
+    "username":"hasib",
+    "price":20
+}
+
+###
+DELETE http://localhost:3300/api/v1/tickets/t/
+
+###
+DELETE http://localhost:3300/api/v1/tickets/u/
